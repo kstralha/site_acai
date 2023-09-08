@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Checkbox e radio</title>
+            <link rel="stylesheet" href="./assets/css/style.css">
+        </head>
+        <body>
+            <form onsubmit="alert('Pedido realizado!')" autocomplete="off"> <!--Method "get" para verificar oq foi mandado para o servidor pela URL-->
+              <h1>Loja de <font color = "purple">Açaí</font>.</h1>
+              <p>Selecione os ingredientes adicionais.</p>
+              
+              <h3><u>Complementos</u>:</h2> 
+              <input type="checkbox" name="complemento[]" value="ninho"> + Ninho <br>
+              <input type="checkbox" name="complemento[]" value="pacoca"> + Paçoca<br>
+              <input type="checkbox" name="complemento[]" value="chocoball"> + Chocoball <br>
+              <input type="checkbox" name="complemento[]" value="leite_conden"> + Leite condensado <br>
+              <input type="checkbox" name="complemento[]" value="amendoin"> + Amendoin <br>
+           
+
+
+              <h3><u>Itens</u></h2>
+              <strong>Deseja talher?</strong>
+              <input type="radio" name="talher" value="sim"> Sim
+              <input type="radio" name="talher" value="nao"> Não
+
+              <!--Em radio o "name" recebe o mesmo valor, porém os "values" devem ser distintos
+                por se tratar de input boolean-->
+
+
+
+              <h3><u>Frutas:</u></h2>
+              <p>Escolha até <strong>1 fruta</strong>.</p>
+              <input type="checkbox" name="fruta" value="morango"> + Morango <br>
+              <input type="checkbox" name="fruta" value="banana"> + Banana <br>
+              <input type="checkbox" name="fruta" value="uva"> + Uva <br>
+
+              <h3><u>Bebida:</u></h2>
+              <p><strong>Deseja bebida?</strong></p>
+               <input type="radio" name="bebida" value="agua"> Água <br>
+               <input type="radio" name="bebida" value="refri"> Refrigerante <br>
+               <input type="radio" name="bebida" value="suco"> Suco <br>
+               <input type="radio" name="bebida" value="nao"> Não <br>
+
+              <br><label>Método de pagamento:</label>
+              <select name="metodo_pagamento">
+                <option value="">Selecione o método de pagamento</option>
+                <option value="pix">PIX</option>
+                <option value="cartao_deb">Cartão de débito</option>
+                <option value="cartao_cre">Cartão de crédito</option>
+                <option value="dinheiro">Dinheiro</option>
+              </select><hr>
+              
+              <br><button type="submit" >Enviar</button><br>
+
+            </form>
+    
+        </body>
+    </html>
